@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#C5CAE9"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    card_view:cardElevation="4dp"
+    card_view:cardMaxElevation="10dp"
+    card_view:cardBackgroundColor="#d5efd4">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cont_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/im_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:src="@android:drawable/ic_menu_more" />
+
+    <TextView
+        android:id="@+id/lbl_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/im_item_icon"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="48dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:text="BTC to USD"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/lbl_item_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_item_text"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="1"
+        android:text="Price"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
