@@ -24,25 +24,24 @@
         android:layout_marginTop="73dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Amount"
+        android:text="Currency Value"
         android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"
         android:layout_below="@+id/editText2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
         android:ems="10"
         android:inputType="number"
+        android:layout_alignBaseline="@+id/editText"
         android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignLeft="@+id/convert"
+        android:layout_alignStart="@+id/convert" />
 
     <Button
         android:id="@+id/convert"
@@ -57,11 +56,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/convert"
+        android:layout_below="@+id/convert"
         android:layout_alignLeft="@+id/editText2"
         android:layout_alignStart="@+id/editText2"
         android:layout_marginBottom="53dp"
         android:text=""
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"/>
 
 </RelativeLayout>

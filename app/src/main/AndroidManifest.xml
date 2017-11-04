@@ -39,7 +39,7 @@
         </activity>
         <activity
             android:name=".ui.CountriesAndCodes"
-            android:label="List of Codes"
+            android:label="Countries and Codes"
             android:parentActivityName="com.app.crypto.cryptoalc.ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

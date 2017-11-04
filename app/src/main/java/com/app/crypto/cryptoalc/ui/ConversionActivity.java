@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.app.crypto.cryptoalc.R;
 
@@ -29,10 +28,11 @@ public class ConversionActivity extends AppCompatActivity {
         setContentView(R.layout.conversion_activity);
         Intent intent = getIntent();
         getPrice = intent.getStringExtra("price");
+        final EditText eText = (EditText) findViewById(R.id.editText4);
         if (!isNetworkAvailable()){
-            if(getPrice == "Price"){
                 getPrice = "?";
-            }
+                eText.setVisibility(View.GONE);
+
         }
         final Activity activity = this;
         activity.setTitle("Make Conversions");
@@ -44,15 +44,14 @@ public class ConversionActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                EditText eText = (EditText) findViewById(R.id.editText4);
+                final TextView textV = (TextView) findViewById(R.id.textView2);
                 String amtText = eText.getText().toString().trim();
                 double dAmt = Double.parseDouble(amtText);
                 double pAmt = Double.parseDouble(getPrice);
 
                 double total = dAmt * pAmt;
-                TextView textV = (TextView) findViewById(R.id.textView2);
                 String newTotal = String.valueOf(total);
-                textV.setText(newTotal);
+                textV.setText("New Value "+newTotal);
             }
         });
     }
